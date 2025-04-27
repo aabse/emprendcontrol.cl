@@ -1,0 +1,144 @@
+---
+import BoltIcon from "./icons/BoltIcon.astro";
+import LockIcon from "./icons/LockIcon.astro";
+import ScheduleIcon from "./icons/ScheduleIcon.astro";
+import VerifiedCheckIcon from "./icons/VerifiedCheckIcon.astro";
+---
+
+<section id="about" class="section bg-gray-50 relative overflow-hidden">
+  <!-- Formas decorativas -->
+  <div class="absolute top-20 right-0 w-96 h-96 bg-green-100 rounded-full opacity-70 blur-3xl -z-10"></div>
+  <div class="absolute bottom-20 left-0 w-64 h-64 bg-yellow-100 rounded-full opacity-70 blur-3xl -z-10"></div>
+  
+  <div class="container-custom relative">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="section-title mx-auto">Sobre Nosotros</h2>
+      <p class="text-gray-600 mt-6 max-w-3xl mx-auto">
+        En Emprend Control, nos dedicamos a proporcionar soluciones efectivas y seguras para el control de plagas, 
+        protegiendo su hogar y negocio con los métodos más avanzados del mercado.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <div class="relative">
+          <!-- Stacked cards effect -->
+          <div class="blob-shape absolute -right-4 -bottom-4 w-full h-full bg-green-100 z-0"></div>
+          <div class="blob-shape absolute -right-2 -bottom-2 w-full h-full bg-green-50 z-10"></div>
+          <div class="card relative z-20 border-none shadow-xl">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 flex items-center justify-center shadow-md">
+                  <VerifiedCheckIcon class="h-12 w-12 text-green-500" />
+                </div>
+                <div class="bg-gradient-to-br from-green-700/5 to-green-700/10 rounded-2xl p-4 flex items-center justify-center shadow-md">
+                  <BoltIcon class="h-12 w-12 text-green-700" />
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-4 flex items-center justify-center shadow-md">
+                  <LockIcon class="h-12 w-12 text-yellow-500" />
+                </div>
+                <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-4 flex items-center justify-center shadow-md">
+                  <ScheduleIcon class="h-12 w-12 text-gray-700" />
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-800">+10 años de experiencia</h3>
+              <p class="text-gray-600 mt-2">Brindando soluciones efectivas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8" data-aos="fade-left">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Misión</h3>
+          <p class="text-gray-600 text-lg">
+            En Emprend Control, nos dedicamos a proporcionar soluciones efectivas y seguras para el control de plagas, 
+            protegiendo su hogar y negocio con los métodos más avanzados del mercado.
+          </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 gap-6 mt-8">
+          <div class="card hover:border-l-4 hover:border-green-500 border-transparent transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-start">
+              <div class="mr-4 bg-gradient-to-br from-green-50 to-green-100 p-3 rounded-xl shadow-md">
+                <VerifiedCheckIcon class="h-7 w-7 text-green-500" />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 text-lg">Profesionalismo</h4>
+                <p class="text-gray-600 mt-1">
+                  Personal certificado y altamente capacitado
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card hover:border-l-4 hover:border-green-700 border-transparent transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-start">
+              <div class="mr-4 bg-gradient-to-br from-green-700/5 to-green-700/10 p-3 rounded-xl shadow-md">
+                <BoltIcon class="h-7 w-7 text-green-700" />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 text-lg">Eficiencia</h4>
+                <p class="text-gray-600 mt-1">
+                  Resultados rápidos y duraderos
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card hover:border-l-4 hover:border-yellow-500 border-transparent transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-start">
+              <div class="mr-4 bg-gradient-to-br from-yellow-50 to-yellow-100 p-3 rounded-xl shadow-md">
+                <LockIcon class="h-7 w-7 text-yellow-500" />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 text-lg">Seguridad</h4>
+                <p class="text-gray-600 mt-1">
+                  Productos seguros para su familia y mascotas
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card hover:border-l-4 hover:border-gray-700 border-transparent transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-start">
+              <div class="mr-4 bg-gradient-to-br from-gray-100 to-gray-200 p-3 rounded-xl shadow-md">
+                <ScheduleIcon class="h-7 w-7 text-gray-700" />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 text-lg">Puntualidad</h4>
+                <p class="text-gray-600 mt-1">
+                  Respetamos su tiempo y horarios
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20" data-aos="fade-up">
+      <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="text-4xl font-bold text-green-500 mb-2">+500</div>
+        <div class="text-gray-600">Clientes Satisfechos</div>
+      </div>
+      <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="text-4xl font-bold text-green-700 mb-2">+1000</div>
+        <div class="text-gray-600">Servicios Realizados</div>
+      </div>
+      <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="text-4xl font-bold text-yellow-500 mb-2">+10</div>
+        <div class="text-gray-600">Años de Experiencia</div>
+      </div>
+      <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="text-4xl font-bold text-gray-700 mb-2">100%</div>
+        <div class="text-gray-600">Garantía de Satisfacción</div>
+      </div>
+    </div>
+  </div>
+</section>

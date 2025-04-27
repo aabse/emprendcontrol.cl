@@ -1,0 +1,28 @@
+---
+interface Props {
+  variant?: "primary" | "outline" | "white";
+  type?: "button" | "submit" | "reset";
+  class?: string;
+}
+
+const { variant = "primary", type = "button", class: className = "" } = Astro.props;
+
+const getVariantClasses = () => {
+  switch (variant) {
+    case "primary":
+      return "bg-green-600 hover:bg-green-700 text-white";
+    case "outline":
+      return "border border-green-600 text-green-600 hover:bg-green-50";
+    case "white":
+      return "bg-white text-green-700 hover:bg-green-50";
+    default:
+      return "bg-green-600 hover:bg-green-700 text-white";
+  }
+};
+
+const classes = `inline-flex h-10 items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 ${getVariantClasses()} ${className}`;
+---
+
+<button type={type} class={classes}>
+  <slot />
+</button>

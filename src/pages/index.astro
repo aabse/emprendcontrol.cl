@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import Hero from "@/components/Hero.astro"
+import Services from "@/components/Services.astro"
+import AboutUs from "@/components/AboutUs.astro"
+import Contact from "@/components/Contact.astro"
+import Footer from "@/components/Footer.astro"
+import Navbar from "@/components/Navbar.astro"
+---
+
+<Layout title="Emprend Control - Servicios de Fumigación Profesional">
+    <!-- Navbar -->
+    <Navbar />
+    <main class="flex-1">
+        <Hero />
+
+        <Services />
+        <AboutUs />
+        <Contact />
+    </main>
+    <Footer />
+</Layout>

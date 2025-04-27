@@ -1,0 +1,245 @@
+---
+import ArrowForwardIcon from "./icons/ArrowForwardIcon.astro"
+import BuildingIcon from "./icons/BuildingIcon.astro"
+import CheckIcon from "./icons/CheckIcon.astro"
+import HouseIcon from "./icons/HouseIcon.astro"
+import VerifiedCheckIcon from "./icons/VerifiedCheckIcon.astro"
+
+const services = {
+  residential: {
+    title: "Fumigación Residencial",
+    description: "Protegemos su hogar contra insectos, roedores y otras plagas comunes con métodos seguros para toda la familia.",
+    subservices: [
+      "Control de cucarachas",
+      "Eliminación de roedores",
+      "Tratamiento contra hormigas"
+    ]
+  },
+  commercial: {
+    title: "Fumigación Comercial",
+    description: "Soluciones personalizadas para empresas, restaurantes, hoteles y otros espacios comerciales.",
+    subservices: [
+      "Control de plagas en restaurantes",
+      "Fumigación de oficinas",
+      "Tratamiento para almacenes",
+    ]
+  },
+  preventive: {
+    title: "Control Preventivo",
+    description: "Programas de mantenimiento preventivo para evitar infestaciones antes de que ocurran.",
+    subservices: [
+      "Inspecciones periódicas",
+      "Tratamientos preventivos",
+      "Asesoramiento profesional",
+    ]
+  }
+}
+---
+<section id="servicios" class="section bg-white relative overflow-hidden">
+  <!-- Formas decorativas -->
+  <div class="absolute top-40 left-0 w-96 h-96 bg-green-50 rounded-full opacity-70 blur-3xl -z-10"></div>
+  <div class="absolute bottom-40 right-0 w-64 h-64 bg-yellow-50 rounded-full opacity-70 blur-3xl -z-10"></div>
+  
+  <div class="container-custom relative">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="section-title mx-auto">Nuestros Servicios</h2>
+      <p class="text-gray-600 mt-6 max-w-3xl mx-auto">
+        Ofrecemos soluciones integrales para el control de plagas en hogares, empresas y espacios comerciales,
+        adaptándonos a las necesidades específicas de cada cliente.
+      </p>
+    </div>
+    
+    <!-- Services Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Service 1 -->
+      <div class="group" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-full group-hover:-translate-y-2 flex flex-col border-none shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-green-500 group-hover:to-green-600 transition-all duration-300 shadow-md">
+            <HouseIcon />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">{services.residential.title}</h3>
+          <p class="text-gray-600 mb-6 flex-grow">
+            {services.residential.description}
+          </p>
+          
+          <ul class="space-y-3 mb-6">
+            {services.residential.subservices.map((subservice) => (
+              <li class="flex items-center">
+                <div class="bg-green-100 rounded-full p-1 mr-3">
+                  <CheckIcon class="h-5 w-5 text-green-500" />
+                </div>
+                <span class="text-gray-700">{subservice}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <a href="#contacto" class="inline-flex items-center text-green-600 font-medium hover:text-green-700 mt-auto group-hover:underline transition-all">
+            Solicitar servicio
+            <ArrowForwardIcon class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="group" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-full group-hover:-translate-y-2 flex flex-col border-none shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-700/5 to-green-700/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-green-600 group-hover:to-green-700 transition-all duration-300 shadow-md">
+            <BuildingIcon />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">{services.commercial.title}</h3>
+          <p class="text-gray-600 mb-6 flex-grow">
+            {services.commercial.description}
+          </p>
+          
+          <ul class="space-y-3 mb-6">
+            {services.commercial.subservices.map((subservice) => (
+              <li class="flex items-center">
+                <div class="bg-green-100 rounded-full p-1 mr-3">
+                  <CheckIcon class="h-5 w-5 text-green-700" />
+                </div>
+                <span class="text-gray-700">{subservice}</span>
+              </li>
+            ))}
+            
+          </ul>
+          
+          <a href="#contacto" class="inline-flex items-center text-green-700 font-medium hover:text-green-800 mt-auto group-hover:underline transition-all">
+            Solicitar servicio
+            <ArrowForwardIcon class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="group" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-full group-hover:-translate-y-2 flex flex-col border-none shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-yellow-50 to-yellow-100 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-yellow-400 group-hover:to-yellow-500 transition-all duration-300 shadow-md">
+            <VerifiedCheckIcon />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">{services.preventive.title}</h3>
+          <p class="text-gray-600 mb-6 flex-grow">
+            {services.preventive.description}
+          </p>
+          
+          <ul class="space-y-3 mb-6">
+            {services.commercial.subservices.map((subservice) => (
+              <li class="flex items-center">
+                <div class="bg-yellow-100 rounded-full p-1 mr-3">
+                  <CheckIcon class="h-5 w-5 text-yellow-500" />
+                </div>
+                <span class="text-gray-700">{subservice}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <a href="#contacto" class="inline-flex items-center text-yellow-600 font-medium hover:text-yellow-700 mt-auto group-hover:underline transition-all">
+            Solicitar servicio
+            <ArrowForwardIcon class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Process - Horizontal Version -->
+    <div class="mt-24" data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-center mb-12 text-gray-800">Nuestro Proceso</h3>
+      
+      <div class="relative">
+        <!-- Process steps horizontal -->
+        <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-2 bg-gradient-to-r from-green-100 via-green-200 to-green-100 rounded-full transform -translate-y-1/2 z-0"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-lg shadow-green-500/30 mb-6">
+                <span class="text-2xl">1</span>
+              </div>
+              <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Inspección</h4>
+                <p class="text-gray-600">
+                  Realizamos una evaluación completa para identificar el tipo de plaga y la extensión del problema.
+                </p>
+              </div>
+            </div>
+            <!-- Arrow for desktop -->
+            <div class="hidden lg:block absolute top-10 right-0 transform translate-x-1/2 z-20">
+              <ArrowForwardIcon class="h-8 w-8 text-green-400" />
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-lg shadow-green-700/30 mb-6">
+                <span class="text-2xl">2</span>
+              </div>
+              <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Diagnóstico</h4>
+                <p class="text-gray-600">
+                  Desarrollamos un plan personalizado basado en los resultados de la inspección.
+                </p>
+              </div>
+            </div>
+            <!-- Arrow for desktop -->
+            <div class="hidden lg:block absolute top-10 right-0 transform translate-x-1/2 z-20">
+              <ArrowForwardIcon class="h-8 w-8 text-green-400" />
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-lg shadow-yellow-500/30 mb-6">
+                <span class="text-2xl">3</span>
+              </div>
+              <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Tratamiento</h4>
+                <p class="text-gray-600">
+                  Aplicamos el tratamiento adecuado utilizando productos seguros y efectivos.
+                </p>
+              </div>
+            </div>
+            <!-- Arrow for desktop -->
+            <div class="hidden lg:block absolute top-10 right-0 transform translate-x-1/2 z-20">
+              <ArrowForwardIcon class="h-8 w-8 text-green-400" />
+            </div>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex flex-col items-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-lg shadow-gray-700/30 mb-6">
+                <span class="text-2xl">4</span>
+              </div>
+              <div class="card text-center border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full">
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Seguimiento</h4>
+                <p class="text-gray-600">
+                  Realizamos visitas de seguimiento para garantizar la efectividad del tratamiento a largo plazo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="mt-24" data-aos="zoom-in">
+      <div class="card bg-gradient-to-r from-green-600 to-green-500 p-10 md:p-16 border-none rounded-3xl shadow-xl shadow-green-500/20">
+        <div class="text-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
+            ¿Listo para deshacerte de las plagas?
+          </h3>
+          <p class="text-white text-lg mb-8 max-w-2xl mx-auto">
+            Contáctanos hoy mismo para una consulta gratuita y obtén un 10% de descuento en tu primer servicio.
+          </p>
+          <a href="#contacto" class="btn btn-secondary text-lg">
+            Solicitar Presupuesto Gratis
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
