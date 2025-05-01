@@ -7,8 +7,8 @@ import PhoneIcon from "./icons/PhoneIcon.astro"
 import ScheduleIcon from "./icons/ScheduleIcon.astro"
 
 const contact = {
-  phone: '+57 310 123 4567',
-  email: 'contacto@plagas.com.co',
+  phone: '+569 7106 2582',
+  email: 'emprendcontrol@gmail.com',
   address: 'Salamanca, Chile',
   businessHours: [
     'Lunes a Viernes: 8:00 AM - 6:00 PM',
@@ -16,23 +16,10 @@ const contact = {
     'Domingos y festivos: Cerrado'
   ],
   socialMedia: {
-    facebook: 'https://www.facebook.com/plagas.com.co',
-    twitter: 'https://twitter.com/plagascomco',
-    instagram: 'https://www.instagram.com/plagascomco/'
+    facebook: 'https://www.facebook.com/emprendcontrol',
+    instagram: 'https://www.instagram.com/emprendcontrol/'
   }
 }
-
-let formSuccess = false;
-let formError = false;
-
-const handleSubmit = (event: any) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const name = formData.get('name');
-  const email = formData.get('email');
-  console.log('Nombre:', name);
-  console.log('Correo:', email);
-};
 
 ---
 <section id="contacto" class="section bg-white relative overflow-hidden">
