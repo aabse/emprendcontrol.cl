@@ -1,5 +1,6 @@
 ---
 import imgLogo from "@/assets/images/logo_emprend-control.webp";
+import { Image } from 'astro:assets';
 
 const navItems = [
   { name: "Inicio", url: "#inicio" },
@@ -15,7 +16,7 @@ const navItems = [
       <!-- Logo -->
       <a href="#inicio" class="flex items-center space-x-2 z-50">
         <div class="h-16 w-16">
-          <img src={imgLogo.src} alt="Logo Emprend Control" />
+          <Image src={imgLogo} alt="Logo Emprend Control" />
         </div>
         <span class="text-xl font-bold text-header-text">Emprend Control</span>
       </a>

@@ -5,6 +5,7 @@ import MailIcon from "./icons/MailIcon.astro";
 import AddressIcon from "./icons/AddressIcon.astro";
 import FacebookIcon from "./icons/FacebookIcon.astro";
 import InstagramIcon from "./icons/InstagramIcon.astro";
+import { Image } from 'astro:assets';
 
 const currentYear = new Date().getFullYear();
 
@@ -50,7 +51,7 @@ const contact = {
       <div>
         <div class="flex items-center space-x-2 mb-6">
           <div class="w-12 h-12">
-            <img src={imgLogo.src} alt="Logo Emprend Control" />
+            <Image src={imgLogo} alt="Logo Emprend Control" />
           </div>
           <span class="text-xl font-bold">Emprend Control</span>
         </div>
