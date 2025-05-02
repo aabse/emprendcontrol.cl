@@ -15,8 +15,14 @@ const contact = {
     'Sábados, Domingos y festivos: Cerrado'
   ],
   socialMedia: {
-    facebook: 'https://www.facebook.com/emprendcontrol',
-    instagram: 'https://www.instagram.com/emprendcontrol/'
+    facebook: {
+      url: 'https://www.facebook.com/emprendcontrol',
+      label: 'Acceder al perfil de Facebook de Emprend Control'
+    },
+    instagram: {
+      url: 'https://www.instagram.com/emprendcontrol/',
+      label: 'Acceder al perfil de Instagram de Emprend Control'
+    }
   }
 }
 
@@ -185,10 +191,10 @@ const contact = {
           <div class="mt-8">
             <h4 class="font-bold text-gray-800 mb-4">Síguenos en redes sociales</h4>
             <div class="flex space-x-4">
-              <a href={contact.socialMedia.facebook} class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white transition-colors shadow-md">
+              <a href={contact.socialMedia.facebook.url} aria-label={contact.socialMedia.facebook.label} target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white transition-colors shadow-md">
                 <FacebookIcon />
               </a>
-              <a href={contact.socialMedia.instagram} class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white transition-colors shadow-md">
+              <a href={contact.socialMedia.instagram.url} aria-label={contact.socialMedia.instagram.label} target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white transition-colors shadow-md">
                 <InstagramIcon />
               </a>
             </div>

@@ -1,5 +1,5 @@
 ---
-import imgLogo from "@/assets/images/logo_emprend-control.png";
+import imgLogo from "@/assets/images/logo_emprend-control.webp";
 import PhoneIcon from "./icons/PhoneIcon.astro";
 import MailIcon from "./icons/MailIcon.astro";
 import AddressIcon from "./icons/AddressIcon.astro";
@@ -26,14 +26,15 @@ const contact = {
   phone: '+569 7106 2582',
   email: 'emprendcontrol@gmail.com',
   address: 'Salamanca, Chile',
-  businessHours: [
-    'Lunes a Viernes: 8:00 AM - 6:00 PM',
-    'Sábado: 9:00 AM - 2:00 PM',
-    'Domingos y festivos: Cerrado'
-  ],
   socialMedia: {
-    facebook: 'https://www.facebook.com/emprendcontrol',
-    instagram: 'https://www.instagram.com/emprendcontrol/'
+    facebook: {
+      url: 'https://www.facebook.com/emprendcontrol',
+      label: 'Acceder al perfil de Facebook de Emprend Control'
+    },
+    instagram: {
+      url: 'https://www.instagram.com/emprendcontrol/',
+      label: 'Acceder al perfil de Instagram de Emprend Control'
+    }
   }
 }
 ---
@@ -49,7 +50,7 @@ const contact = {
       <div>
         <div class="flex items-center space-x-2 mb-6">
           <div class="w-12 h-12">
-            <img src={imgLogo.src} />
+            <img src={imgLogo.src} alt="Logo Emprend Control" />
           </div>
           <span class="text-xl font-bold">Emprend Control</span>
         </div>
@@ -57,13 +58,13 @@ const contact = {
           Soluciones profesionales de control de plagas para hogares y negocios. Nuestro equipo de expertos garantiza resultados duraderos con métodos confiables y de alta calidad.
         </p>
         <div class="flex space-x-4">
-          <a href={contact.socialMedia.facebook} class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-gray-300 hover:bg-green-500 hover:text-white transition-colors">
+          <a href={contact.socialMedia.facebook.url} aria-label={contact.socialMedia.facebook.label} class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-gray-300 hover:bg-green-500 hover:text-white transition-colors">
             <span class="sr-only">Facebook</span>
             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <FacebookIcon />
             </svg>
           </a>
-          <a href={contact.socialMedia.instagram} class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-gray-300 hover:bg-green-500 hover:text-white transition-colors">
+          <a href={contact.socialMedia.instagram.url} aria-label={contact.socialMedia.instagram.label} class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-gray-300 hover:bg-green-500 hover:text-white transition-colors">
             <span class="sr-only">Instagram</span>
             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <InstagramIcon />
