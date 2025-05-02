@@ -7,7 +7,7 @@ import { Resend } from "resend"
 const resend = new Resend(import.meta.env.RESEND_API_KEY)
 
 // Correo al que se enviarán los mensajes
-const RECIPIENT_EMAIL = "anabhi01@gmail.com"
+const RECIPIENT_EMAIL = "emprendcontrol@gmail.com"
 
 export const POST: APIRoute = async ({ request }) => {
   try {
