@@ -51,7 +51,12 @@ const contact = {
       <div>
         <div class="flex items-center space-x-2 mb-6">
           <div class="w-12 h-12">
-            <Image src={imgLogo} alt="Logo Emprend Control" />
+            <Image 
+              src={imgLogo} 
+              alt="Logo Emprend Control"
+              width={80}
+              sizes="(max-width: 480px) 40vw, (max-width: 768px) 25vw, 15vw"
+              format="webp" />
           </div>
           <span class="text-xl font-bold">Emprend Control</span>
         </div>

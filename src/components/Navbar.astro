@@ -16,7 +16,12 @@ const navItems = [
       <!-- Logo -->
       <a href="#inicio" class="flex items-center space-x-2 z-50">
         <div class="h-16 w-16">
-          <Image src={imgLogo} alt="Logo Emprend Control" />
+          <Image 
+            src={imgLogo} 
+            alt="Logo Emprend Control"
+            width={80}
+            sizes="(max-width: 480px) 40vw, (max-width: 768px) 25vw, 15vw"
+            format="webp" />
         </div>
         <span class="text-xl font-bold text-header-text">Emprend Control</span>
       </a>
