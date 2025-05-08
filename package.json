@@ -12,6 +12,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/vercel": "^8.1.4",
     "@tailwindcss/vite": "^4.1.4",
+    "@vercel/analytics": "^1.5.0",
     "aos": "^2.3.4",
     "astro": "^5.7.10",
     "resend": "^4.4.1",
