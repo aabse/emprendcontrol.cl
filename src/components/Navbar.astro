@@ -1,6 +1,7 @@
 ---
 import imgLogo from "@/assets/images/logo_emprend-control.webp";
 import { Image } from 'astro:assets';
+import MenuIcon from "./icons/MenuIcon.astro";
 
 const navItems = [
   { name: "Inicio", url: "#inicio" },
@@ -52,9 +53,7 @@ const navItems = [
       
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-button" class="md:hidden flex items-center z-50" aria-label="Abrir menú">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-header-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        <MenuIcon class="h-6 w-6 text-header-text" />
       </button>
       
       <!-- Mobile Navigation -->
